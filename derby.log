@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue May 21 09:57:35 CEST 2019:
+ Iniciando instancia a816c00e-016a-d965-4bf7-0000045237e0 de Derby, versión The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): 
+en el directorio de base de datos C:\Users\User\Documents\NetBeansProjects\Videoclub\Database con el cargador de clases sun.misc.Launcher$AppClassLoader@6f94fa3e
+Cargado desde file:/C:/Program%20Files/glassfish-4.1.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_191-b12
+user.dir=C:\Users\User\Documents\NetBeansProjects\Videoclub
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''

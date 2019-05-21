@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPeliculasView" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newpackage.FXMLController">
+   <children>
+      <ImageView fitHeight="432.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/fondo.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="7.0" prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="515.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonNuevo" prefHeight="25.0" prefWidth="103.0" text="Nueva Pelicula">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ff00b2" />
+                              <Stop color="#ff00b2" offset="0.007662835249042145" />
+                              <Stop color="#360099" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonNuevoGenero" prefHeight="25.0" prefWidth="96.0" text="Nuevo Genero">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ff00b2" />
+                              <Stop color="#00e10b" offset="0.007662835249042145" />
+                              <Stop color="#00b2b5" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonEditar" text="Editar">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#ff00b2" />
+                              <Stop color="#e0a000" offset="0.007662835249042145" />
+                              <Stop color="#0db500" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonSuprimir" text="Suprimir">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#ff00b2" />
+                              <Stop color="#de0000" offset="0.007662835249042145" />
+                              <Stop color="#5e0000" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tabla" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="Director" prefWidth="141.0" text="Director" />
+                <TableColumn fx:id="Duracion" prefWidth="81.0" text="Duracion" />
+                  <TableColumn fx:id="Nombre" prefWidth="164.0" text="Nombre" />
+                  <TableColumn fx:id="Genero" prefWidth="173.0" text="Genero" />
+              </columns>
+            </TableView>
+            <GridPane hgap="10.0" prefHeight="200.0" prefWidth="600.0" vgap="10.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="114.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="436.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre:" textFill="AQUA" />
+                  <Label text="Director:" textFill="#00eeff" GridPane.rowIndex="1" />
+                  <TextField fx:id="textFieldNombre" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="textFieldDirector" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font></TextField>
+                  <Button mnemonicParsing="false" onAction="#onActionButtonGuardar" text="Guardar" textFill="#009714" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
